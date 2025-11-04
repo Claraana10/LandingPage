@@ -1,0 +1,313 @@
+$cor-primaria: #2f80ed;
+$cor-primaria-hover: #2565c1; 
+$cor-accent: #27ae60;
+$cor-accent-hover: #1e8449; 
+$cor-fundo: #f9f9f9;
+$cor-texto: #333;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: $cor-fundo;
+  color: $cor-texto;
+}
+
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 60px;  
+      height: auto;
+      margin-right: 0.5rem;
+      transition: 0.3s;
+    }
+
+    a {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: $cor-primaria;
+      text-decoration: none;
+    }
+  }
+
+  .botoes-navegacao button {
+    margin-left: 1rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+
+    &.botao-principal {
+      background: $cor-primaria;
+      color: #fff;
+
+      &:hover {
+        background: $cor-primaria-hover;
+      }
+    }
+
+    &.botao-cadastro {
+      background: $cor-accent;
+      color: #fff;
+
+      &:hover {
+        background: $cor-accent-hover;
+      }
+    }
+
+    &.botao-secundario {
+      background: #fff;
+      color: $cor-primaria;
+      border: 2px solid $cor-primaria;
+
+      &:hover {
+        background: $cor-primaria;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.secao-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 3rem;
+  background-color: #eef6ff;
+
+  .conteudo-hero {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .texto-hero {
+      flex: 1;
+      padding-right: 2rem;
+      min-width: 280px;
+
+      h1 {
+        font-size: 2.8rem;
+        color: $cor-primaria;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+      }
+
+      .botoes-hero button {
+        margin-right: 1rem;
+      }
+    }
+
+    .imagem-hero {
+      flex: 1;
+      min-width: 280px;
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+.secao-funcionalidades {
+  padding: 4rem 3rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: $cor-primaria;
+  }
+
+  .grade-funcionalidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+
+    .funcionalidade {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .icone {
+        font-size: 2.5rem;
+        color: $cor-primaria;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #555;
+      }
+    }
+  }
+}
+
+
+.secao-como-funciona {
+  padding: 4rem 3rem;
+  background-color: #f1f7f9;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: $cor-primaria;
+  }
+
+  .fluxo-passo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .passo {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+      .numero {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $cor-accent;
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+    }
+  }
+}
+
+
+.secao-depoimentos {
+  padding: 4rem 3rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: $cor-primaria;
+  }
+
+  .grade-depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    .depoimento {
+      background: #fff;
+      padding: 1.8rem;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+      p {
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+
+      span {
+        font-weight: bold;
+        color: $cor-primaria;
+      }
+    }
+  }
+}
+
+
+.rodape {
+  background: #fff;
+  padding: 2rem 3rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+
+  .conteudo-rodape {
+    color: #555;
+    font-size: 0.9rem;
+
+    .botao-admin {
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      background: $cor-primaria;
+      color: #fff;
+      transition: 0.3s;
+
+      &:hover {
+        background: $cor-primaria-hover;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    .botoes-navegacao {
+      margin-top: 1rem;
+    }
+
+    .logo img {
+      width: 50px; 
+  }
+
+  .secao-hero .conteudo-hero {
+    flex-direction: column;
+  }
+}
+}
