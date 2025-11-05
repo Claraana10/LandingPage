@@ -25,8 +25,8 @@ export default function PaginaLanding() {
       <section className="secao-hero">
         <div className="conteudo-hero">
           <div className="texto-hero">
-            <h1>Acompanhe Sua Saúde com Segurança</h1>
-            <p>Veja suas consultas, histórico e prontuário médico de forma simples e segura.</p>
+            <h1>O Futuro da Saúde Digital</h1>
+            <p>Revolucionando o atendimento nas UBS com modernidades e design centrado no usuário e tecnologia de ponta para um Brasil mais saudável.</p>
         
           </div>
           <div className="imagem-hero">
